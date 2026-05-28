@@ -992,3 +992,9 @@ exit
 
 Script done, output file is typescript
 Droom:droomsite Iris$ 
+
+
+
+
+the problem? "//" in the filepath..
+naming matters kids...
