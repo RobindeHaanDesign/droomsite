@@ -1,0 +1,994 @@
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+Droom:droomsite Iris$ node -v
+v24.16.0
+Droom:droomsite Iris$ nvm use 20
+Now using node v20.20.2 (npm v10.8.2)
+Droom:droomsite Iris$ node -v
+v20.20.2
+Droom:droomsite Iris$ rm -rf node_modules package-lock.json
+Droom:droomsite Iris$ npm install
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated gulp-minify-css@1.2.4: Please use gulp-clean-css
+npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+npm warn deprecated lodash.template@3.6.2: This package is deprecated. Use https://socket.dev/npm/package/eta instead.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated gulp-util@3.0.8: gulp-util is deprecated - replace it, following the guidelines at https://medium.com/gulpjs/gulp-util-ca3b1f9f9ac5
+npm warn deprecated uuid@3.4.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+npm warn deprecated node-uuid@1.4.8: Use uuid module instead
+
+added 712 packages, and audited 713 packages in 12s
+
+127 packages are looking for funding
+  run `npm fund` for details
+
+39 vulnerabilities (2 low, 13 moderate, 24 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Droom:droomsite Iris$ npm outdated
+Package                              Current          Wanted  Latest  Location                                   Depended by
+eleventy-plugin-console-plus  1.0.0-alpha.10  1.0.0-alpha.10   2.0.0  node_modules/eleventy-plugin-console-plus  droomsite
+Droom:droomsite Iris$ npm update
+
+up to date, audited 713 packages in 18s
+
+127 packages are looking for funding
+  run `npm fund` for details
+
+39 vulnerabilities (2 low, 13 moderate, 24 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Droom:droomsite Iris$ npm audit
+# npm audit report
+
+clean-css  <4.1.11
+Regular Expression Denial of Service in clean-css - https://github.com/advisories/GHSA-wxhq-pm8v-cw75
+fix available via `npm audit fix --force`
+Will install 20@1.0.0, which is a breaking change
+node_modules/clean-css
+  gulp-minify-css  *
+  Depends on vulnerable versions of clean-css
+  Depends on vulnerable versions of gulp-util
+  node_modules/gulp-minify-css
+    20  >=3.1.6
+    Depends on vulnerable versions of gulp-minify-css
+    node_modules/20
+
+color-string  <1.5.5
+Severity: moderate
+Regular Expression Denial of Service (ReDOS) - https://github.com/advisories/GHSA-257v-vj4p-3w2h
+fix available via `npm audit fix`
+node_modules/color-string
+  color  <=0.11.4
+  Depends on vulnerable versions of color-string
+  node_modules/color
+    colorspace  <=1.0.1
+    Depends on vulnerable versions of color
+    node_modules/colorspace
+      diagnostics  1.0.0 - 1.1.0
+      Depends on vulnerable versions of colorspace
+      node_modules/diagnostics
+        minimize  1.7.0 - 2.0.0
+        Depends on vulnerable versions of diagnostics
+        node_modules/minimize
+
+cross-spawn  <6.0.6
+Severity: high
+Regular Expression Denial of Service (ReDoS) in cross-spawn - https://github.com/advisories/GHSA-3xgq-45jj-v275
+fix available via `npm audit fix`
+node_modules/bin-build/node_modules/cross-spawn
+node_modules/bin-check/node_modules/cross-spawn
+node_modules/exec-buffer/node_modules/cross-spawn
+  execa  0.5.0 - 0.9.0
+  Depends on vulnerable versions of cross-spawn
+  node_modules/bin-build/node_modules/execa
+  node_modules/bin-check/node_modules/execa
+  node_modules/exec-buffer/node_modules/execa
+    bin-build  *
+    Depends on vulnerable versions of download
+    Depends on vulnerable versions of execa
+    Depends on vulnerable versions of tempfile
+    node_modules/bin-build
+      gifsicle  >=3.0.0
+      Depends on vulnerable versions of bin-build
+      Depends on vulnerable versions of bin-wrapper
+      node_modules/gifsicle
+        imagemin-gifsicle  >=6.0.0
+        Depends on vulnerable versions of gifsicle
+        node_modules/imagemin-gifsicle
+          gulp-imagemin  >=5.0.0
+          Depends on vulnerable versions of imagemin
+          Depends on vulnerable versions of imagemin-gifsicle
+          Depends on vulnerable versions of imagemin-mozjpeg
+          Depends on vulnerable versions of imagemin-optipng
+          Depends on vulnerable versions of imagemin-svgo
+          node_modules/gulp-imagemin
+      mozjpeg  >=4.0.0
+      Depends on vulnerable versions of bin-build
+      Depends on vulnerable versions of bin-wrapper
+      node_modules/mozjpeg
+        imagemin-mozjpeg  >=8.0.0
+        Depends on vulnerable versions of mozjpeg
+        node_modules/imagemin-mozjpeg
+      optipng-bin  >=3.0.0
+      Depends on vulnerable versions of bin-build
+      Depends on vulnerable versions of bin-wrapper
+      node_modules/optipng-bin
+        imagemin-optipng  >=6.0.0
+        Depends on vulnerable versions of optipng-bin
+        node_modules/imagemin-optipng
+    bin-check  >=4.1.0
+    Depends on vulnerable versions of execa
+    node_modules/bin-check
+      bin-wrapper  >=0.4.0
+      Depends on vulnerable versions of bin-check
+      Depends on vulnerable versions of bin-version-check
+      Depends on vulnerable versions of download
+      node_modules/bin-wrapper
+    exec-buffer  *
+    Depends on vulnerable versions of execa
+    Depends on vulnerable versions of tempfile
+    node_modules/exec-buffer
+
+fast-xml-parser  <5.7.0
+Severity: moderate
+fast-xml-parser XMLBuilder: XML Comment and CDATA Injection via Unescaped Delimiters - https://github.com/advisories/GHSA-gh4j-gqv2-49f6
+fix available via `npm audit fix`
+node_modules/fast-xml-parser
+  is-svg  4.3.0 - 5.1.0
+  Depends on vulnerable versions of fast-xml-parser
+  node_modules/is-svg
+    imagemin-svgo  10.0.0 - 11.0.1
+    Depends on vulnerable versions of is-svg
+    node_modules/imagemin-svgo
+
+file-type  13.0.0 - 21.3.0
+Severity: moderate
+file-type affected by infinite loop in ASF parser on malformed input with zero-size sub-header - https://github.com/advisories/GHSA-5v7r-6r5c-r473
+fix available via `npm audit fix`
+node_modules/file-type
+  imagemin  >=8.0.0
+  Depends on vulnerable versions of file-type
+  node_modules/imagemin
+
+got  <=11.8.3
+Severity: high
+Got allows a redirect to a UNIX socket - https://github.com/advisories/GHSA-pfrx-2q88-qq97
+Depends on vulnerable versions of cacheable-request
+fix available via `npm audit fix`
+node_modules/bin-wrapper/node_modules/got
+node_modules/got
+  download  >=4.0.0
+  Depends on vulnerable versions of got
+  node_modules/bin-wrapper/node_modules/download
+  node_modules/download
+
+http-cache-semantics  <4.1.1
+Severity: high
+http-cache-semantics vulnerable to Regular Expression Denial of Service - https://github.com/advisories/GHSA-rc47-6667-2j5j
+fix available via `npm audit fix`
+node_modules/http-cache-semantics
+  cacheable-request  0.1.0 - 2.1.4
+  Depends on vulnerable versions of http-cache-semantics
+  node_modules/cacheable-request
+
+lodash.template  <=4.5.0
+Severity: high
+Command Injection in lodash - https://github.com/advisories/GHSA-35jh-r3h4-6jhm
+fix available via `npm audit fix --force`
+Will install 20@1.0.0, which is a breaking change
+node_modules/lodash.template
+  gulp-util  >=1.1.0
+  Depends on vulnerable versions of lodash.template
+  node_modules/gulp-util
+    gulp-minify-html  >=0.1.1
+    Depends on vulnerable versions of gulp-util
+    node_modules/gulp-minify-html
+
+semver-regex  <=3.1.3
+Severity: high
+semver-regex Regular Expression Denial of Service (ReDOS) - https://github.com/advisories/GHSA-44c6-4v22-4mhx
+Regular expression denial of service in semver-regex - https://github.com/advisories/GHSA-4x5v-gmq8-25ch
+fix available via `npm audit fix`
+node_modules/semver-regex
+  find-versions  <=3.2.0
+  Depends on vulnerable versions of semver-regex
+  node_modules/find-versions
+    bin-version  <=4.0.0
+    Depends on vulnerable versions of find-versions
+    node_modules/bin-version
+      bin-version-check  <=4.0.0
+      Depends on vulnerable versions of bin-version
+      node_modules/bin-version-check
+
+uuid  <11.1.1
+Severity: moderate
+uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided - https://github.com/advisories/GHSA-w5hq-g745-h8pq
+fix available via `npm audit fix`
+node_modules/uuid
+  tempfile  <=4.0.0
+  Depends on vulnerable versions of uuid
+  node_modules/tempfile
+
+39 vulnerabilities (2 low, 13 moderate, 24 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+Droom:droomsite Iris$ npm audit fix
+
+added 1 package, and audited 714 packages in 1s
+
+127 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+clean-css  <4.1.11
+Regular Expression Denial of Service in clean-css - https://github.com/advisories/GHSA-wxhq-pm8v-cw75
+fix available via `npm audit fix --force`
+Will install 20@1.0.0, which is a breaking change
+node_modules/clean-css
+  gulp-minify-css  *
+  Depends on vulnerable versions of clean-css
+  Depends on vulnerable versions of gulp-util
+  node_modules/gulp-minify-css
+    20  >=3.1.6
+    Depends on vulnerable versions of gulp-minify-css
+    node_modules/20
+
+color-string  <1.5.5
+Severity: moderate
+Regular Expression Denial of Service (ReDOS) - https://github.com/advisories/GHSA-257v-vj4p-3w2h
+fix available via `npm audit fix`
+node_modules/color-string
+  color  <=0.11.4
+  Depends on vulnerable versions of color-string
+  node_modules/color
+    colorspace  <=1.0.1
+    Depends on vulnerable versions of color
+    node_modules/colorspace
+      diagnostics  1.0.0 - 1.1.0
+      Depends on vulnerable versions of colorspace
+      node_modules/diagnostics
+        minimize  1.7.0 - 2.0.0
+        Depends on vulnerable versions of diagnostics
+        node_modules/minimize
+
+cross-spawn  <6.0.6
+Severity: high
+Regular Expression Denial of Service (ReDoS) in cross-spawn - https://github.com/advisories/GHSA-3xgq-45jj-v275
+fix available via `npm audit fix`
+node_modules/bin-build/node_modules/cross-spawn
+node_modules/bin-check/node_modules/cross-spawn
+node_modules/exec-buffer/node_modules/cross-spawn
+  execa  0.5.0 - 0.9.0
+  Depends on vulnerable versions of cross-spawn
+  node_modules/bin-build/node_modules/execa
+  node_modules/bin-check/node_modules/execa
+  node_modules/exec-buffer/node_modules/execa
+    bin-build  *
+    Depends on vulnerable versions of download
+    Depends on vulnerable versions of execa
+    Depends on vulnerable versions of tempfile
+    node_modules/bin-build
+      gifsicle  >=3.0.0
+      Depends on vulnerable versions of bin-build
+      Depends on vulnerable versions of bin-wrapper
+      node_modules/gifsicle
+        imagemin-gifsicle  >=6.0.0
+        Depends on vulnerable versions of gifsicle
+        node_modules/imagemin-gifsicle
+          gulp-imagemin  >=5.0.0
+          Depends on vulnerable versions of imagemin
+          Depends on vulnerable versions of imagemin-gifsicle
+          Depends on vulnerable versions of imagemin-mozjpeg
+          Depends on vulnerable versions of imagemin-optipng
+          Depends on vulnerable versions of imagemin-svgo
+          node_modules/gulp-imagemin
+      mozjpeg  >=4.0.0
+      Depends on vulnerable versions of bin-build
+      Depends on vulnerable versions of bin-wrapper
+      node_modules/mozjpeg
+        imagemin-mozjpeg  >=8.0.0
+        Depends on vulnerable versions of mozjpeg
+        node_modules/imagemin-mozjpeg
+      optipng-bin  >=3.0.0
+      Depends on vulnerable versions of bin-build
+      Depends on vulnerable versions of bin-wrapper
+      node_modules/optipng-bin
+        imagemin-optipng  >=6.0.0
+        Depends on vulnerable versions of optipng-bin
+        node_modules/imagemin-optipng
+    bin-check  >=4.1.0
+    Depends on vulnerable versions of execa
+    node_modules/bin-check
+      bin-wrapper  >=0.4.0
+      Depends on vulnerable versions of bin-check
+      Depends on vulnerable versions of bin-version-check
+      Depends on vulnerable versions of download
+      node_modules/bin-wrapper
+    exec-buffer  *
+    Depends on vulnerable versions of execa
+    Depends on vulnerable versions of tempfile
+    node_modules/exec-buffer
+
+fast-xml-parser  <5.7.0
+Severity: moderate
+fast-xml-parser XMLBuilder: XML Comment and CDATA Injection via Unescaped Delimiters - https://github.com/advisories/GHSA-gh4j-gqv2-49f6
+fix available via `npm audit fix`
+node_modules/fast-xml-parser
+  is-svg  4.3.0 - 5.1.0
+  Depends on vulnerable versions of fast-xml-parser
+  node_modules/is-svg
+    imagemin-svgo  10.0.0 - 11.0.1
+    Depends on vulnerable versions of is-svg
+    node_modules/imagemin-svgo
+
+file-type  13.0.0 - 21.3.0
+Severity: moderate
+file-type affected by infinite loop in ASF parser on malformed input with zero-size sub-header - https://github.com/advisories/GHSA-5v7r-6r5c-r473
+fix available via `npm audit fix`
+node_modules/file-type
+  imagemin  >=8.0.0
+  Depends on vulnerable versions of file-type
+  node_modules/imagemin
+
+got  <=11.8.3
+Severity: high
+Got allows a redirect to a UNIX socket - https://github.com/advisories/GHSA-pfrx-2q88-qq97
+Depends on vulnerable versions of cacheable-request
+fix available via `npm audit fix`
+node_modules/bin-wrapper/node_modules/got
+node_modules/got
+  download  >=4.0.0
+  Depends on vulnerable versions of got
+  node_modules/bin-wrapper/node_modules/download
+  node_modules/download
+
+http-cache-semantics  <4.1.1
+Severity: high
+http-cache-semantics vulnerable to Regular Expression Denial of Service - https://github.com/advisories/GHSA-rc47-6667-2j5j
+fix available via `npm audit fix`
+node_modules/http-cache-semantics
+  cacheable-request  0.1.0 - 2.1.4
+  Depends on vulnerable versions of http-cache-semantics
+  node_modules/cacheable-request
+
+lodash.template  <=4.5.0
+Severity: high
+Command Injection in lodash - https://github.com/advisories/GHSA-35jh-r3h4-6jhm
+fix available via `npm audit fix --force`
+Will install 20@1.0.0, which is a breaking change
+node_modules/lodash.template
+  gulp-util  >=1.1.0
+  Depends on vulnerable versions of lodash.template
+  node_modules/gulp-util
+    gulp-minify-html  >=0.1.1
+    Depends on vulnerable versions of gulp-util
+    node_modules/gulp-minify-html
+
+semver-regex  <=3.1.3
+Severity: high
+semver-regex Regular Expression Denial of Service (ReDOS) - https://github.com/advisories/GHSA-44c6-4v22-4mhx
+Regular expression denial of service in semver-regex - https://github.com/advisories/GHSA-4x5v-gmq8-25ch
+fix available via `npm audit fix`
+node_modules/semver-regex
+  find-versions  <=3.2.0
+  Depends on vulnerable versions of semver-regex
+  node_modules/find-versions
+    bin-version  <=4.0.0
+    Depends on vulnerable versions of find-versions
+    node_modules/bin-version
+      bin-version-check  <=4.0.0
+      Depends on vulnerable versions of bin-version
+      node_modules/bin-version-check
+
+uuid  <11.1.1
+Severity: moderate
+uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided - https://github.com/advisories/GHSA-w5hq-g745-h8pq
+fix available via `npm audit fix`
+node_modules/uuid
+  tempfile  <=4.0.0
+  Depends on vulnerable versions of uuid
+  node_modules/tempfile
+
+39 vulnerabilities (2 low, 13 moderate, 24 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+Droom:droomsite Iris$ npm audit --production
+npm warn config production Use `--omit=dev` instead.
+# npm audit report
+
+clean-css  <4.1.11
+Regular Expression Denial of Service in clean-css - https://github.com/advisories/GHSA-wxhq-pm8v-cw75
+fix available via `npm audit fix --force`
+Will install 20@1.0.0, which is a breaking change
+node_modules/clean-css
+  gulp-minify-css  *
+  Depends on vulnerable versions of clean-css
+  Depends on vulnerable versions of gulp-util
+  node_modules/gulp-minify-css
+    20  >=3.1.6
+    Depends on vulnerable versions of gulp-minify-css
+    node_modules/20
+
+color-string  <1.5.5
+Severity: moderate
+Regular Expression Denial of Service (ReDOS) - https://github.com/advisories/GHSA-257v-vj4p-3w2h
+fix available via `npm audit fix`
+node_modules/color-string
+  color  <=0.11.4
+  Depends on vulnerable versions of color-string
+  node_modules/color
+    colorspace  <=1.0.1
+    Depends on vulnerable versions of color
+    node_modules/colorspace
+      diagnostics  1.0.0 - 1.1.0
+      Depends on vulnerable versions of colorspace
+      node_modules/diagnostics
+        minimize  1.7.0 - 2.0.0
+        Depends on vulnerable versions of diagnostics
+        node_modules/minimize
+
+cross-spawn  <6.0.6
+Severity: high
+Regular Expression Denial of Service (ReDoS) in cross-spawn - https://github.com/advisories/GHSA-3xgq-45jj-v275
+fix available via `npm audit fix`
+node_modules/bin-build/node_modules/cross-spawn
+node_modules/bin-check/node_modules/cross-spawn
+node_modules/exec-buffer/node_modules/cross-spawn
+  execa  0.5.0 - 0.9.0
+  Depends on vulnerable versions of cross-spawn
+  node_modules/bin-build/node_modules/execa
+  node_modules/bin-check/node_modules/execa
+  node_modules/exec-buffer/node_modules/execa
+    bin-build  *
+    Depends on vulnerable versions of download
+    Depends on vulnerable versions of execa
+    Depends on vulnerable versions of tempfile
+    node_modules/bin-build
+      gifsicle  >=3.0.0
+      Depends on vulnerable versions of bin-build
+      Depends on vulnerable versions of bin-wrapper
+      node_modules/gifsicle
+        imagemin-gifsicle  >=6.0.0
+        Depends on vulnerable versions of gifsicle
+        node_modules/imagemin-gifsicle
+          gulp-imagemin  >=5.0.0
+          Depends on vulnerable versions of imagemin
+          Depends on vulnerable versions of imagemin-gifsicle
+          Depends on vulnerable versions of imagemin-mozjpeg
+          Depends on vulnerable versions of imagemin-optipng
+          Depends on vulnerable versions of imagemin-svgo
+          node_modules/gulp-imagemin
+      mozjpeg  >=4.0.0
+      Depends on vulnerable versions of bin-build
+      Depends on vulnerable versions of bin-wrapper
+      node_modules/mozjpeg
+        imagemin-mozjpeg  >=8.0.0
+        Depends on vulnerable versions of mozjpeg
+        node_modules/imagemin-mozjpeg
+      optipng-bin  >=3.0.0
+      Depends on vulnerable versions of bin-build
+      Depends on vulnerable versions of bin-wrapper
+      node_modules/optipng-bin
+        imagemin-optipng  >=6.0.0
+        Depends on vulnerable versions of optipng-bin
+        node_modules/imagemin-optipng
+    bin-check  >=4.1.0
+    Depends on vulnerable versions of execa
+    node_modules/bin-check
+      bin-wrapper  >=0.4.0
+      Depends on vulnerable versions of bin-check
+      Depends on vulnerable versions of bin-version-check
+      Depends on vulnerable versions of download
+      node_modules/bin-wrapper
+    exec-buffer  *
+    Depends on vulnerable versions of execa
+    Depends on vulnerable versions of tempfile
+    node_modules/exec-buffer
+
+fast-xml-parser  <5.7.0
+Severity: moderate
+fast-xml-parser XMLBuilder: XML Comment and CDATA Injection via Unescaped Delimiters - https://github.com/advisories/GHSA-gh4j-gqv2-49f6
+fix available via `npm audit fix`
+node_modules/fast-xml-parser
+  is-svg  4.3.0 - 5.1.0
+  Depends on vulnerable versions of fast-xml-parser
+  node_modules/is-svg
+    imagemin-svgo  10.0.0 - 11.0.1
+    Depends on vulnerable versions of is-svg
+    node_modules/imagemin-svgo
+
+file-type  13.0.0 - 21.3.0
+Severity: moderate
+file-type affected by infinite loop in ASF parser on malformed input with zero-size sub-header - https://github.com/advisories/GHSA-5v7r-6r5c-r473
+fix available via `npm audit fix`
+node_modules/file-type
+  imagemin  >=8.0.0
+  Depends on vulnerable versions of file-type
+  node_modules/imagemin
+
+got  <=11.8.3
+Severity: high
+Got allows a redirect to a UNIX socket - https://github.com/advisories/GHSA-pfrx-2q88-qq97
+Depends on vulnerable versions of cacheable-request
+fix available via `npm audit fix`
+node_modules/bin-wrapper/node_modules/got
+node_modules/got
+  download  >=4.0.0
+  Depends on vulnerable versions of got
+  node_modules/bin-wrapper/node_modules/download
+  node_modules/download
+
+http-cache-semantics  <4.1.1
+Severity: high
+http-cache-semantics vulnerable to Regular Expression Denial of Service - https://github.com/advisories/GHSA-rc47-6667-2j5j
+fix available via `npm audit fix`
+node_modules/http-cache-semantics
+  cacheable-request  0.1.0 - 2.1.4
+  Depends on vulnerable versions of http-cache-semantics
+  node_modules/cacheable-request
+
+lodash.template  <=4.5.0
+Severity: high
+Command Injection in lodash - https://github.com/advisories/GHSA-35jh-r3h4-6jhm
+fix available via `npm audit fix --force`
+Will install 20@1.0.0, which is a breaking change
+node_modules/lodash.template
+  gulp-util  >=1.1.0
+  Depends on vulnerable versions of lodash.template
+  node_modules/gulp-util
+    gulp-minify-html  >=0.1.1
+    Depends on vulnerable versions of gulp-util
+    node_modules/gulp-minify-html
+
+semver-regex  <=3.1.3
+Severity: high
+semver-regex Regular Expression Denial of Service (ReDOS) - https://github.com/advisories/GHSA-44c6-4v22-4mhx
+Regular expression denial of service in semver-regex - https://github.com/advisories/GHSA-4x5v-gmq8-25ch
+fix available via `npm audit fix`
+node_modules/semver-regex
+  find-versions  <=3.2.0
+  Depends on vulnerable versions of semver-regex
+  node_modules/find-versions
+    bin-version  <=4.0.0
+    Depends on vulnerable versions of find-versions
+    node_modules/bin-version
+      bin-version-check  <=4.0.0
+      Depends on vulnerable versions of bin-version
+      node_modules/bin-version-check
+
+uuid  <11.1.1
+Severity: moderate
+uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided - https://github.com/advisories/GHSA-w5hq-g745-h8pq
+fix available via `npm audit fix`
+node_modules/uuid
+  tempfile  <=4.0.0
+  Depends on vulnerable versions of uuid
+  node_modules/tempfile
+
+39 vulnerabilities (2 low, 13 moderate, 24 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+Droom:droomsite Iris$ npm install @11ty/eleventy@latest
+
+up to date, audited 714 packages in 922ms
+
+127 packages are looking for funding
+  run `npm fund` for details
+
+39 vulnerabilities (2 low, 13 moderate, 24 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Droom:droomsite Iris$ npm start
+
+> eleventy_test@1.0.0 start
+> eleventy --serve
+
+sh: eleventy: command not found
+Droom:droomsite Iris$ npm install @11ty/eleventy --save-dev
+
+up to date, audited 714 packages in 4s
+
+127 packages are looking for funding
+  run `npm fund` for details
+
+39 vulnerabilities (2 low, 13 moderate, 24 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Droom:droomsite Iris$ npm start
+
+> eleventy_test@1.0.0 start
+> eleventy --serve
+
+sh: eleventy: command not found
+Droom:droomsite Iris$ npx @11ty/eleventy --serve
+sh: eleventy: command not found
+Droom:droomsite Iris$ npm ls @11ty/eleventy
+eleventy_test@1.0.0 /Users/Iris/Documents/3. WEBSITE :: portfolio/00. 2026/04. VERSIE 4/droomsite
+├── @11ty/eleventy@3.1.5
+└─┬ eleventy-plugin-console-plus@1.0.0-alpha.10
+  └── @11ty/eleventy@3.1.5 deduped
+
+Droom:droomsite Iris$ npx @11ty/eleventy --serve
+sh: eleventy: command not found
+Droom:droomsite Iris$ npm start
+
+> eleventy_test@1.0.0 start
+> eleventy --serve
+
+sh: eleventy: command not found
+Droom:droomsite Iris$ ./node-modules/.bin/eleventy --serve
+bash: ./node-modules/.bin/eleventy: No such file or directory
+Droom:droomsite Iris$ npx -v
+10.8.2
+Droom:droomsite Iris$ pwd
+/Users/Iris/Documents/3. WEBSITE :: portfolio/00. 2026/04. VERSIE 4/droomsite
+Droom:droomsite Iris$ npm run
+Lifecycle scripts included in eleventy_test@1.0.0:
+  start
+    eleventy --serve
+available via `npm run-script`:
+  build
+    eleventy
+Droom:droomsite Iris$ npm start
+
+> eleventy_test@1.0.0 start
+> eleventy --serve
+
+sh: eleventy: command not found
+Droom:droomsite Iris$ node -v
+v20.20.2
+Droom:droomsite Iris$ npm -v
+10.8.2
+Droom:droomsite Iris$ npx -v
+10.8.2
+Droom:droomsite Iris$ npm ls @11ty/eleventy
+eleventy_test@1.0.0 /Users/Iris/Documents/3. WEBSITE :: portfolio/00. 2026/04. VERSIE 4/droomsite
+├── @11ty/eleventy@3.1.5
+└─┬ eleventy-plugin-console-plus@1.0.0-alpha.10
+  └── @11ty/eleventy@3.1.5 deduped
+
+Droom:droomsite Iris$ ls node_modules/.bin
+acorn                   fxparser                mime                    seek-table
+cleancss                gifsicle                minimize                semver
+color-support           gulp                    mozjpeg                 svgo
+eleventy                image-dimensions        nunjucks-precompile     uglifyjs
+eleventy-dev-server     js-yaml                 optipng                 uuid
+errno                   liquid                  resolve                 which
+esparse                 liquidjs                rimraf
+esvalidate              markdown-it             seek-bunzip
+Droom:droomsite Iris$ ./node_modules/.bin/eleventy --serve
+[11ty] Writing ./public/about/index.html from ./src/about.njk
+[11ty] Writing ./public/index.html from ./src/index.njk
+[11ty] Writing ./public/projects/anarchief/index.html from ./src/projects/anarchief.md (liquid)
+[11ty] Writing ./public/projects/backrooms/index.html from ./src/projects/backrooms.md (liquid)
+[11ty] Writing ./public/projects/dasmatterhorn/index.html from ./src/projects/dasmatterhorn.md (liquid)
+[11ty] Writing ./public/projects/douwebusiness/index.html from ./src/projects/douwebusiness.md (liquid)
+[11ty] Writing ./public/projects/gladtoseeyou/index.html from ./src/projects/gladtoseeyou.md (liquid)
+[11ty] Copied 15 Wrote 7 files in 0.53 seconds (v3.1.5)
+[11ty] Watching…
+[11ty] Server at http://localhost:8080/
+^CDroom:droomsite Iris$ npm start
+
+> eleventy_test@1.0.0 start
+> eleventy --serve
+
+[11ty] Writing ./public/about/index.html from ./src/about.njk
+[11ty] Writing ./public/index.html from ./src/index.njk
+[11ty] Writing ./public/projects/anarchief/index.html from ./src/projects/anarchief.md (liquid)
+[11ty] Writing ./public/projects/backrooms/index.html from ./src/projects/backrooms.md (liquid)
+[11ty] Writing ./public/projects/dasmatterhorn/index.html from ./src/projects/dasmatterhorn.md (liquid)
+[11ty] Writing ./public/projects/douwebusiness/index.html from ./src/projects/douwebusiness.md (liquid)
+[11ty] Writing ./public/projects/gladtoseeyou/index.html from ./src/projects/gladtoseeyou.md (liquid)
+[11ty] Copied 15 Wrote 7 files in 0.25 seconds (v3.1.5)
+[11ty] Watching…
+[11ty] Server at http://localhost:8080/
+
+Droom:droomsite Iris$ git status
+Refresh index: 100% (1777/1777), done.
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    node_modules/.bin/nvm
+        modified:   node_modules/.package-lock.json
+        modified:   node_modules/commander/Readme.md
+        deleted:    node_modules/commander/esm.mjs
+        modified:   node_modules/commander/index.js
+        deleted:    node_modules/commander/lib/argument.js
+        deleted:    node_modules/commander/lib/command.js
+        deleted:    node_modules/commander/lib/error.js
+        deleted:    node_modules/commander/lib/help.js
+        deleted:    node_modules/commander/lib/option.js
+        deleted:    node_modules/commander/lib/suggestSimilar.js
+        deleted:    node_modules/commander/package-support.json
+        modified:   node_modules/commander/package.json
+        deleted:    node_modules/commander/typings/index.d.ts
+        modified:   node_modules/dom-serializer/README.md
+        deleted:    node_modules/dom-serializer/lib/esm/foreignNames.d.ts
+        deleted:    node_modules/dom-serializer/lib/esm/foreignNames.d.ts.map
+        deleted:    node_modules/dom-serializer/lib/esm/foreignNames.js
+        deleted:    node_modules/dom-serializer/lib/esm/index.d.ts
+        deleted:    node_modules/dom-serializer/lib/esm/index.d.ts.map
+        deleted:    node_modules/dom-serializer/lib/esm/index.js
+        deleted:    node_modules/dom-serializer/lib/esm/package.json
+        deleted:    node_modules/dom-serializer/lib/foreignNames.d.ts
+        deleted:    node_modules/dom-serializer/lib/foreignNames.d.ts.map
+        deleted:    node_modules/dom-serializer/lib/foreignNames.js
+        deleted:    node_modules/dom-serializer/lib/index.d.ts
+        deleted:    node_modules/dom-serializer/lib/index.d.ts.map
+        deleted:    node_modules/dom-serializer/lib/index.js
+        modified:   node_modules/dom-serializer/package.json
+        deleted:    node_modules/domelementtype/lib/esm/index.d.ts
+        deleted:    node_modules/domelementtype/lib/esm/index.d.ts.map
+        deleted:    node_modules/domelementtype/lib/esm/index.js
+        deleted:    node_modules/domelementtype/lib/esm/package.json
+        deleted:    node_modules/domelementtype/lib/index.d.ts
+        deleted:    node_modules/domelementtype/lib/index.d.ts.map
+        deleted:    node_modules/domelementtype/lib/index.js
+        modified:   node_modules/domelementtype/package.json
+        modified:   node_modules/domelementtype/readme.md
+        deleted:    node_modules/domhandler/lib/index.d.ts
+        deleted:    node_modules/domhandler/lib/index.d.ts.map
+        deleted:    node_modules/domhandler/lib/index.js
+        deleted:    node_modules/domhandler/lib/node.d.ts
+        deleted:    node_modules/domhandler/lib/node.d.ts.map
+        modified:   node_modules/domhandler/lib/node.js
+        modified:   node_modules/domhandler/package.json
+        modified:   node_modules/domhandler/readme.md
+        deleted:    node_modules/domutils/lib/feeds.d.ts
+        deleted:    node_modules/domutils/lib/feeds.d.ts.map
+        deleted:    node_modules/domutils/lib/feeds.js
+        deleted:    node_modules/domutils/lib/helpers.d.ts
+        deleted:    node_modules/domutils/lib/helpers.d.ts.map
+        modified:   node_modules/domutils/lib/helpers.js
+        deleted:    node_modules/domutils/lib/index.d.ts
+        deleted:    node_modules/domutils/lib/index.d.ts.map
+        deleted:    node_modules/domutils/lib/index.js
+        deleted:    node_modules/domutils/lib/legacy.d.ts
+        deleted:    node_modules/domutils/lib/legacy.d.ts.map
+        modified:   node_modules/domutils/lib/legacy.js
+        deleted:    node_modules/domutils/lib/manipulation.d.ts
+        deleted:    node_modules/domutils/lib/manipulation.d.ts.map
+        modified:   node_modules/domutils/lib/manipulation.js
+        deleted:    node_modules/domutils/lib/querying.d.ts
+        deleted:    node_modules/domutils/lib/querying.d.ts.map
+        modified:   node_modules/domutils/lib/querying.js
+        deleted:    node_modules/domutils/lib/stringify.d.ts
+        deleted:    node_modules/domutils/lib/stringify.d.ts.map
+        modified:   node_modules/domutils/lib/stringify.js
+        deleted:    node_modules/domutils/lib/traversal.d.ts
+        deleted:    node_modules/domutils/lib/traversal.d.ts.map
+        modified:   node_modules/domutils/lib/traversal.js
+        modified:   node_modules/domutils/package.json
+        modified:   node_modules/domutils/readme.md
+        modified:   node_modules/extend-shallow/LICENSE
+        modified:   node_modules/extend-shallow/README.md
+        modified:   node_modules/extend-shallow/index.js
+        modified:   node_modules/extend-shallow/package.json
+        modified:   node_modules/htmlparser2/README.md
+        deleted:    node_modules/htmlparser2/lib/FeedHandler.d.ts
+        deleted:    node_modules/htmlparser2/lib/FeedHandler.d.ts.map
+        modified:   node_modules/htmlparser2/lib/FeedHandler.js
+        deleted:    node_modules/htmlparser2/lib/Parser.d.ts
+        deleted:    node_modules/htmlparser2/lib/Parser.d.ts.map
+        modified:   node_modules/htmlparser2/lib/Parser.js
+        deleted:    node_modules/htmlparser2/lib/Tokenizer.d.ts
+        deleted:    node_modules/htmlparser2/lib/Tokenizer.d.ts.map
+        modified:   node_modules/htmlparser2/lib/Tokenizer.js
+        deleted:    node_modules/htmlparser2/lib/WritableStream.d.ts
+        deleted:    node_modules/htmlparser2/lib/WritableStream.d.ts.map
+        modified:   node_modules/htmlparser2/lib/WritableStream.js
+        deleted:    node_modules/htmlparser2/lib/index.d.ts
+        deleted:    node_modules/htmlparser2/lib/index.d.ts.map
+        modified:   node_modules/htmlparser2/lib/index.js
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/decode.d.ts
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/decode.d.ts.map
+        modified:   node_modules/htmlparser2/node_modules/entities/lib/decode.js
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/decode_codepoint.d.ts
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/decode_codepoint.d.ts.map
+        modified:   node_modules/htmlparser2/node_modules/entities/lib/decode_codepoint.js
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/encode-trie.d.ts
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/encode-trie.d.ts.map
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/encode-trie.js
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/encode.d.ts
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/encode.d.ts.map
+        modified:   node_modules/htmlparser2/node_modules/entities/lib/encode.js
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-html.d.ts
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-html.d.ts.map
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-html.js
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-xml.d.ts
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-xml.d.ts.map
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-xml.js
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/index.d.ts
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/index.d.ts.map
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/index.js
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/maps/entities.json
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/maps/legacy.json
+        deleted:    node_modules/htmlparser2/node_modules/entities/lib/maps/xml.json
+        modified:   node_modules/htmlparser2/node_modules/entities/package.json
+        modified:   node_modules/htmlparser2/node_modules/entities/readme.md
+        modified:   node_modules/htmlparser2/package.json
+        modified:   node_modules/is-extendable/LICENSE
+        modified:   node_modules/is-extendable/README.md
+        modified:   node_modules/is-extendable/index.js
+        modified:   node_modules/is-extendable/package.json
+        deleted:    node_modules/nvm/.npmignore
+        deleted:    node_modules/nvm/README.md
+        deleted:    node_modules/nvm/bin/aliases.json
+        deleted:    node_modules/nvm/bin/nvm
+        deleted:    node_modules/nvm/package.json
+        modified:   package-lock.json
+        modified:   package.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Droom:droomsite Iris$ git add .
+Droom:droomsite Iris$ git commit -m "omg it works.."
+[master 8026107] omg it works..
+ Committer: Iris van Velzen <Iris@Droom.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 130 files changed, 19477 insertions(+), 13413 deletions(-)
+ delete mode 120000 node_modules/.bin/nvm
+ delete mode 100644 node_modules/commander/esm.mjs
+ delete mode 100644 node_modules/commander/lib/argument.js
+ delete mode 100644 node_modules/commander/lib/command.js
+ delete mode 100644 node_modules/commander/lib/error.js
+ delete mode 100644 node_modules/commander/lib/help.js
+ delete mode 100644 node_modules/commander/lib/option.js
+ delete mode 100644 node_modules/commander/lib/suggestSimilar.js
+ delete mode 100644 node_modules/commander/package-support.json
+ delete mode 100644 node_modules/commander/typings/index.d.ts
+ delete mode 100644 node_modules/dom-serializer/lib/esm/foreignNames.d.ts
+ delete mode 100644 node_modules/dom-serializer/lib/esm/foreignNames.d.ts.map
+ delete mode 100644 node_modules/dom-serializer/lib/esm/foreignNames.js
+ delete mode 100644 node_modules/dom-serializer/lib/esm/index.d.ts
+ delete mode 100644 node_modules/dom-serializer/lib/esm/index.d.ts.map
+ delete mode 100644 node_modules/dom-serializer/lib/esm/index.js
+ delete mode 100644 node_modules/dom-serializer/lib/esm/package.json
+ delete mode 100644 node_modules/dom-serializer/lib/foreignNames.d.ts
+ delete mode 100644 node_modules/dom-serializer/lib/foreignNames.d.ts.map
+ delete mode 100644 node_modules/dom-serializer/lib/foreignNames.js
+ delete mode 100644 node_modules/dom-serializer/lib/index.d.ts
+ delete mode 100644 node_modules/dom-serializer/lib/index.d.ts.map
+ delete mode 100644 node_modules/dom-serializer/lib/index.js
+ delete mode 100644 node_modules/domelementtype/lib/esm/index.d.ts
+ delete mode 100644 node_modules/domelementtype/lib/esm/index.d.ts.map
+ delete mode 100644 node_modules/domelementtype/lib/esm/index.js
+ delete mode 100644 node_modules/domelementtype/lib/esm/package.json
+ delete mode 100644 node_modules/domelementtype/lib/index.d.ts
+ delete mode 100644 node_modules/domelementtype/lib/index.d.ts.map
+ delete mode 100644 node_modules/domelementtype/lib/index.js
+ delete mode 100644 node_modules/domhandler/lib/index.d.ts
+ delete mode 100644 node_modules/domhandler/lib/index.d.ts.map
+ delete mode 100644 node_modules/domhandler/lib/index.js
+ delete mode 100644 node_modules/domhandler/lib/node.d.ts
+ delete mode 100644 node_modules/domhandler/lib/node.d.ts.map
+ delete mode 100644 node_modules/domutils/lib/feeds.d.ts
+ delete mode 100644 node_modules/domutils/lib/feeds.d.ts.map
+ delete mode 100644 node_modules/domutils/lib/feeds.js
+ delete mode 100644 node_modules/domutils/lib/helpers.d.ts
+ delete mode 100644 node_modules/domutils/lib/helpers.d.ts.map
+ delete mode 100644 node_modules/domutils/lib/index.d.ts
+ delete mode 100644 node_modules/domutils/lib/index.d.ts.map
+ delete mode 100644 node_modules/domutils/lib/index.js
+ delete mode 100644 node_modules/domutils/lib/legacy.d.ts
+ delete mode 100644 node_modules/domutils/lib/legacy.d.ts.map
+ delete mode 100644 node_modules/domutils/lib/manipulation.d.ts
+ delete mode 100644 node_modules/domutils/lib/manipulation.d.ts.map
+ delete mode 100644 node_modules/domutils/lib/querying.d.ts
+ delete mode 100644 node_modules/domutils/lib/querying.d.ts.map
+ delete mode 100644 node_modules/domutils/lib/stringify.d.ts
+ delete mode 100644 node_modules/domutils/lib/stringify.d.ts.map
+ delete mode 100644 node_modules/domutils/lib/traversal.d.ts
+ delete mode 100644 node_modules/domutils/lib/traversal.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/lib/FeedHandler.d.ts
+ delete mode 100644 node_modules/htmlparser2/lib/FeedHandler.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/lib/Parser.d.ts
+ delete mode 100644 node_modules/htmlparser2/lib/Parser.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/lib/Tokenizer.d.ts
+ delete mode 100644 node_modules/htmlparser2/lib/Tokenizer.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/lib/WritableStream.d.ts
+ delete mode 100644 node_modules/htmlparser2/lib/WritableStream.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/lib/index.d.ts
+ delete mode 100644 node_modules/htmlparser2/lib/index.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/decode.d.ts
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/decode.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/decode_codepoint.d.ts
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/decode_codepoint.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/encode-trie.d.ts
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/encode-trie.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/encode-trie.js
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/encode.d.ts
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/encode.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-html.d.ts
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-html.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-html.js
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-xml.d.ts
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-xml.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/generated/decode-data-xml.js
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/index.d.ts
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/index.d.ts.map
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/index.js
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/maps/entities.json
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/maps/legacy.json
+ delete mode 100644 node_modules/htmlparser2/node_modules/entities/lib/maps/xml.json
+ delete mode 100644 node_modules/nvm/.npmignore
+ delete mode 100644 node_modules/nvm/README.md
+ delete mode 100644 node_modules/nvm/bin/aliases.json
+ delete mode 100755 node_modules/nvm/bin/nvm
+ delete mode 100644 node_modules/nvm/package.json
+Droom:droomsite Iris$ git push
+Enumerating objects: 112, done.
+Counting objects: 100% (112/112), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (56/56), done.
+Writing objects: 100% (59/59), 109.82 KiB | 12.20 MiB/s, done.
+Total 59 (delta 20), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (20/20), completed with 15 local objects.
+To https://github.com/RobindeHaanDesign/droomsite.git
+   c0abeb0..8026107  master -> master
+Droom:droomsite Iris$ command 2>&1 | tee outputfile.txt
+Droom:droomsite Iris$ script
+Script started, output file is typescript
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$ exit
+exit
+
+Script done, output file is typescript
+Droom:droomsite Iris$ 
