@@ -1,0 +1,39 @@
+<!-- navbar -->
+
+<style>
+  :root {
+    --accent-color: {{ color | default("#000") }};
+  }
+  @media screen and (max-width: 600px){
+    .navbar {
+      background-color: {{ color }};
+    }
+  }
+</style>
+
+<div class="navbar-container">
+  <div class="navbar">
+    <div class="droom-iris" id="droom-iris" style="outline: 2px solid black;" 
+        onmouseover="this.style.outlineColor= '{{ color }}';"
+        onmouseout="this.style.outlineColor='black';">
+      <a href="/index.html" class="droomlink"> 
+        <div class="droombox" style="color: black"
+        onmouseover="this.style.color='{{ color }}';"
+        onmouseout="this.style.color='black';"
+        >
+          DROOM.IRIS
+      </div>
+      </a>
+    </div>
+      <div class="about" id="about" style="outline: 2px solid black; color:black;"
+        onmouseover="this.style.outlineColor= '{{ color }}'; this.style.color='{{ color }}';"
+        onmouseout="this.style.outlineColor='black'; this.style.color='black';">
+        <a class="about-text" href="/about/index.html" style="color: black"
+        onmouseover="this.style.color='{{ color }}';"
+        onmouseout="this.style.color='black';"
+        >
+           ABOUT 
+        </a>
+      </div>
+</div>
+  </div>

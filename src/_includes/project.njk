@@ -1,0 +1,46 @@
+---
+layout: base.njk
+---
+
+<div class="project-pagestructure-container">
+    {% include 'nav.njk' %}
+    <div class="project-content-container">
+        <div class="project-content-left">
+            <div class="project-title" style="background-color:{{color}};">
+                <h4>{{ title }}</h4>
+            </div>
+            <div class="project-description-container">
+                <div class="project-description">
+                    <article id="articledescription">
+                        <p>{{ description }}</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="moreinfo" style="background-color:{{ color }};">
+                <input type="checkbox" name="drop" class="drop" id="drop">
+                <label for="drop" class="label">
+                    info
+                    <span class="drop-content">
+                        <div class="drop-p">
+                            {{ content | safe }}
+                        </div> 
+                        <div class="metadata">
+
+                            {% include 'metadata.njk' %}
+
+                        </div>
+                    </span>
+                </label>
+            </div>  
+        </div>
+        
+        <div class="project-content-right">
+            
+            {% include 'gallery.njk' %}
+
+        </div>
+</div>
+<div class="copyright-container">
+    {% include 'copyright.njk' %}
+</div>

@@ -1,0 +1,34 @@
+<div>  
+    
+                {% for item in metadata %}
+
+                    {% if item.type == "category" %}
+                    <p><span> {{ item.entry }} </span></p>
+
+                    {% elif item.type == "collab" %}
+                    <p>collaboration / client: <span> {{ item.entry }} </span></p>
+
+                    {% elif item.type == "fonts" %}
+                    <p>fonts: <span> {{ item.entry }} </span></p>
+
+                    {% elif item.type == "printedby" %}
+                    <p>printedby: <span> {{ item.entry }} </span></p>
+
+                    {% elif item.type == "printedby" %}
+                    <p>printed by: <span> {{ item.entry }} </span></p>
+                    
+                    {% elif item.type == "event" %}
+                    <p>event: <span> {{ item.entry }} </span></p>
+
+                    {% elif item.type == "location" %}
+                    <p>location: <span> {{ item.entry }} </span></p>
+
+                    {% elif item.type == "organiser" %}
+                    <p>organiser: <span> {{ item.entry }} </span></p>
+
+                    {% endif %}
+                {% endfor %} 
+
+</div>
+
+

@@ -1,0 +1,43 @@
+---
+title: droom.iris
+layout: 'base.njk'
+---
+ {% include 'nav.njk' %}
+<!-- column structure -->
+
+ {% set columnCount = 3 %}
+
+    {% set columns = [] %}
+        {% for i in range(0, columnCount) %}
+        {% set _ = columns.push([]) %}
+    {% endfor %}
+    {% for card in collections.card %}
+        {% set colIndex = loop.index0 % columnCount %}
+        {% set _ = columns[colIndex].push(card) %}
+    {% endfor %}
+
+<div class="index-gallery-container">
+
+    <!-- cards -->
+     {% for column in columns %}
+    <div class="index-gallery-column">
+        {%- for card in column -%}
+            <div class="card-container">
+                <p class="card-order">{{ card.data.order }}</p>
+                <a href="{{ card.url }}">
+                    <video autoplay poster="{{ card.data.cardimg }}" class="video" loop muted plays-inline>
+                    <source src="{{ card.data.cardimg }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                    <source type="video/webm" src="videos/animated_poster_reel.webm">
+                    </video>
+                </a>
+                <div class="card-header">
+                    <a href="{{ card.url }}"><h1> {{ card.data.title }} </h1> </a>
+                </div>
+            </div>
+        {%- endfor -%}
+   </div>
+   {%- endfor -%}
+</div>
+
+{% include 'copyright.njk' %}
